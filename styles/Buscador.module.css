@@ -1,0 +1,21 @@
+.boton {
+  margin: 1rem 0;
+}
+
+.buscador {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+}
+
+.titulo {
+  clear: both;
+  color: rgb(0, 0, 207);
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.negro {
+  color: black;
+}

@@ -1,0 +1,90 @@
+.titulo {
+  clear: both;
+  color: rgb(0, 0, 207);
+  font-size: 3rem;
+  font-family: "Roboto Slab", serif;
+  width: max-content;
+  margin: auto;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 80%;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+
+.parrafo {
+  color: black;
+  font-size: 1.5rem;
+  width: 70%;
+  margin: auto;
+  text-align: start;
+}
+
+.imagen {
+  width: 40%;
+  margin: auto;
+}
+
+.botones {
+  margin: 1rem auto;
+}
+
+.boton {
+  margin: 0.5rem 1rem;
+  text-align: center;
+}
+
+.cuadro {
+  width: 80%;
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(5, 80px);
+  grid-auto-flow: column;
+}
+
+.cuadro__opcion {
+  border: 0.1rem black solid;
+  height: 100%;
+  display: block;
+  margin: auto;
+  padding: 2rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.error {
+  margin: 1rem 0;
+}
+
+.datos {
+  width: max-content;
+  margin: auto;
+}
+
+.dato {
+  border-top: 0.1rem black solid;
+  width: 100;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.card {
+  width: 17rem;
+}
+
+.centrar {
+  text-align: center;
+  margin: auto;
+  width: max-content;
+}
+
+.alerta {
+  width: 25rem;
+  margin: auto;
+}

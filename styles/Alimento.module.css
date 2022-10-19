@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.titulo {
+  clear: both;
+  color: rgb(0, 0, 207);
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.altura {
+  text-align: center;
+}
+
+.modal {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.centrar {
+  text-align: center;
+  margin: auto;
+}
+
+.listaAlimentos {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1024px) {
+  .listaAlimentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .listaAlimentos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.titulo {
+  text-align: center;
+}
+
+.negro {
+  color: black;
+}
+
+.parrafo {
+  color: black;
+  font-size: 1.5rem;
+  width: 50%;
+  text-align: start;
+}
+
+@media (max-width: 1024px) {
+  .parrafo {
+    width: 100%;
+  }
+}
+
+.imagen {
+  width: 60%;
+  margin: auto;
+}
+
+.contenido {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .contenido {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.margen {
+  margin: 1rem;
+}
