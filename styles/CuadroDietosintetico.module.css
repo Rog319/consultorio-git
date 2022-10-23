@@ -1,18 +1,26 @@
 .titulo {
   clear: both;
-  color: rgb(0, 0, 207);
+  color: var(--negro);
   font-size: 3rem;
-  font-family: "Roboto Slab", serif;
-  width: max-content;
-  margin: auto;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+.titulo2 {
+  clear: both;
+  color: var(--lila);
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
 }
 
 .contenido {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: max-content;
   width: 80%;
-  justify-content: center;
+
   gap: 2rem;
   margin: 1rem auto;
 }
@@ -25,13 +33,16 @@
   text-align: start;
 }
 
+@media (max-width: 768px) {
+  .contenido,
+  .parrafo {
+    width: 100%;
+  }
+}
+
 .imagen {
   width: 40%;
   margin: auto;
-}
-
-.botones {
-  margin: 1rem auto;
 }
 
 .boton {
@@ -40,7 +51,6 @@
 }
 
 .cuadro {
-  width: 80%;
   display: grid;
   margin: 0;
   grid-template-columns: repeat(5, 120px);
@@ -63,8 +73,9 @@
 }
 
 .datos {
-  width: max-content;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dato {
@@ -79,11 +90,24 @@
 }
 
 .centrar {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: auto;
   width: max-content;
 }
 
+.botones {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto;
+}
+
+@media (max-width: 768px) {
+  .botones {
+    flex-direction: column;
+  }
+}
 .alerta {
   width: 25rem;
   margin: auto;

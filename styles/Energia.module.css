@@ -2,7 +2,6 @@
 
 .titulo {
   clear: both;
-  /* color: rgb(0, 0, 207); */
   color: var(--lila);
   font-size: 3rem;
   text-align: center;
@@ -10,11 +9,16 @@
 }
 
 .formulario {
-  max-width: 50rem;
   text-align: center;
   margin: auto;
-  border-radius: 2rem;
-  padding: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    max-width: 50rem;
+    padding: 2rem;
+  }
 }
 
 .formulario img {

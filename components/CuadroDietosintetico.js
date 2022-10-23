@@ -1,53 +1,52 @@
-import React from "react";
-import { Button, Card, Image, Text, Badge, Group } from "@mantine/core";
-import { useState } from "react";
-import Link from "next/link";
-import CuadroPorcentaje from "./CuadroPorcentaje";
-import styles from "../styles/CuadroDietosintetico.module.css";
-import CuadroGEntreKG from "./CuadroGEntreKG";
+import React from 'react';
+import { Button, Card, Image, Text, Badge, Group, Stack } from '@mantine/core';
+import { useState } from 'react';
+import Link from 'next/link';
+import CuadroPorcentaje from './CuadroPorcentaje';
+import styles from '../styles/CuadroDietosintetico.module.css';
+import CuadroGEntreKG from './CuadroGEntreKG';
 
 const CuadroDietosintetico = ({ datosPersona, resetearDatos }) => {
   const [opcionElegido, setOpcionElegido] = useState(null);
   const [value, setValue] = useState(0);
 
-  const porcentajeSeleccionado = () => setOpcionElegido("porcentaje");
-  const gEntreKGSeleccionado = () => setOpcionElegido("gEntreKG");
+  const porcentajeSeleccionado = () => setOpcionElegido('porcentaje');
+  const gEntreKGSeleccionado = () => setOpcionElegido('gEntreKG');
 
   const datosDePersona = () => {
     return (
       <div className={styles.datos}>
-        <Card shadow="sm" p="lg" radius="md" withBorder className={styles.card}>
+        <Card shadow='sm' p='lg' radius='md' withBorder className={styles.card}>
           <Card.Section>
-            <Image src="/assets/img/mis-datos.png" height={170} alt="imagen" />
+            <Image src='/assets/img/mis-datos.png' height={170} alt='imagen' />
           </Card.Section>
-
-          <Group position="apart" mt="md" mb="xs">
-            <Text size="xl" align="center" weight={700}>
-              Tus Datos
+          <Text size='xl' align='center' weight={700}>
+            Tus Datos
+          </Text>
+          <Stack align='flex-start'>
+            <Text size='lg'>• Peso: {datosPersona['peso']} KG</Text>
+            <Text size='lg'>• Altura: {datosPersona['altura'] / 100} M</Text>
+            <Text size='lg'>• Edad: {datosPersona['edad']} Años</Text>
+            <Text size='lg'>
+              • Sexo:{' '}
+              {datosPersona['sexo'].charAt(0).toUpperCase() +
+                datosPersona['sexo'].slice(1)}
             </Text>
-          </Group>
-          <Text size="lg">• Peso: {datosPersona["peso"]} KG</Text>
-          <Text size="lg">• Altura: {datosPersona["altura"] / 100} M</Text>
-          <Text size="lg">• Edad: {datosPersona["edad"]} Años</Text>
-          <Text size="lg">
-            • Sexo:{" "}
-            {datosPersona["sexo"].charAt(0).toUpperCase() +
-              datosPersona["sexo"].slice(1)}
-          </Text>
-          <Text size="lg">
-            • Actividad:{" "}
-            {datosPersona["actividad"].charAt(0).toUpperCase() +
-              datosPersona["actividad"].slice(1)}
-          </Text>
-          <Text size="lg">• Calorias: {datosPersona["get"]} kcal x dia</Text>
+            <Text size='lg'>
+              • Actividad:{' '}
+              {datosPersona['actividad'].charAt(0).toUpperCase() +
+                datosPersona['actividad'].slice(1)}
+            </Text>
+            <Text size='lg'>• Calorias: {datosPersona['get']} kcal x dia</Text>
+          </Stack>
 
           <Button
             onClick={resetearDatos}
-            variant="light"
-            color="red"
+            variant='light'
+            color='red'
             fullWidth
-            mt="md"
-            radius="md"
+            mt='md'
+            radius='md'
           >
             Cambiar Datos
           </Button>
@@ -65,14 +64,14 @@ const CuadroDietosintetico = ({ datosPersona, resetearDatos }) => {
         <div className={styles.botones}>
           <Button
             className={styles.boton}
-            size="md"
+            size='md'
             onClick={porcentajeSeleccionado}
           >
             Utilizando porcentajes %
           </Button>
           <Button
             className={styles.boton}
-            size="md"
+            size='md'
             onClick={gEntreKGSeleccionado}
           >
             Utilizando gramo entre kilogramo g/kg
@@ -80,12 +79,12 @@ const CuadroDietosintetico = ({ datosPersona, resetearDatos }) => {
         </div>
       </div>
     );
-  } else if (opcionElegido === "porcentaje") {
+  } else if (opcionElegido === 'porcentaje') {
     return (
       <div className={styles.centrar}>
         {datosDePersona()}
         <div className={styles.botones}>
-          <Button size="md" onClick={gEntreKGSeleccionado}>
+          <Button size='md' onClick={gEntreKGSeleccionado}>
             Cambiar a g/kg
           </Button>
         </div>
@@ -95,12 +94,12 @@ const CuadroDietosintetico = ({ datosPersona, resetearDatos }) => {
         />
       </div>
     );
-  } else if (opcionElegido === "gEntreKG") {
+  } else if (opcionElegido === 'gEntreKG') {
     return (
       <div className={styles.centrar}>
         {datosDePersona()}
         <div className={styles.botones}>
-          <Button size="md" onClick={porcentajeSeleccionado}>
+          <Button size='md' onClick={porcentajeSeleccionado}>
             Cambiar a porcentajes %
           </Button>
         </div>

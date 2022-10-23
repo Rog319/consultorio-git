@@ -148,7 +148,8 @@ const FormularioEnergia = ({ setDatosPersona }) => {
             mt='sm'
             size='xl'
             placeholder='Tu peso en Kg'
-            step={1}
+            step={0.5}
+            precision={2}
             {...form.getInputProps('peso')}
           />
 
